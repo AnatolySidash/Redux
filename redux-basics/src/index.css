@@ -1,0 +1,60 @@
+#root {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
+.header {
+  padding: 50px 70px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 50px 70px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.main__amount {
+  font-size: 24px;
+}
+
+.main__add-money {
+  padding: 10px 30px;
+  min-width: 210px;
+  background-color: rgb(129, 187, 43);
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main__add-money:hover {
+  opacity: 0.8;
+}
+
+.blue {
+  background-color: lightblue;
+  color: #000;
+}
+
+.main__customer {
+  font-size: 24px;
+  cursor: pointer;
+}
