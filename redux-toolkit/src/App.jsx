@@ -1,19 +1,28 @@
 import { useDispatch, useSelector } from 'react-redux'
 // import { addCustomerAction, deleteCustomerAction } from './store/customerReducer';
 import { getCustomers } from './asyncActions/customers';
-import { ADD_CUSTOMER, DELETE_CUSTOMER } from './reduxToolkit/toolkitCustomerReducer';
+// import { ADD_CUSTOMER, DELETE_CUSTOMER } from './reduxToolkit/toolkitCustomerReducer';
+import { ADD_CUSTOMER, DELETE_CUSTOMER, ADD_CASH, GET_CASH } from './reduxToolkit/toolkitSliceReducer';
 
 function App() {
   const dispatch = useDispatch();
-  const cash = useSelector(state => state.cash.toolkitCash);
-  const customers = useSelector(state => state.customers.toolkitCustomers);
+  const cash = useSelector(state => state.toolkit.cash);
+  const customers = useSelector(state => state.toolkit.customers);
+
+  // const addMoney = (cash) => {
+  //   dispatch({ type: "ADD_CASH", payload: cash })
+  // }
+
+  // const getMoney = (cash) => {
+  //   dispatch({ type: "GET_CASH", payload: cash })
+  // }
 
   const addMoney = (cash) => {
-    dispatch({ type: "ADD_CASH", payload: cash })
+    dispatch(ADD_CASH(cash))
   }
 
   const getMoney = (cash) => {
-    dispatch({ type: "GET_CASH", payload: cash })
+    dispatch(GET_CASH(cash))
   }
 
   const addCustomer = (name) => {

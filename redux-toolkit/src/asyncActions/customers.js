@@ -1,5 +1,6 @@
 // import { addManyCustomersAction } from "../store/customerReducer"
-import { ADD_MANY_CUSTOMERS } from '../reduxToolkit/toolkitCustomerReducer';
+// import { ADD_MANY_CUSTOMERS } from '../reduxToolkit/toolkitCustomerReducer';
+import { ADD_MANY_CUSTOMERS } from "../reduxToolkit/toolkitSliceReducer"
 
 export const getCustomers = () => {
    return function (dispatch) {
